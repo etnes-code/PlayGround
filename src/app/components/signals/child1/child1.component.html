@@ -1,0 +1,12 @@
+<!-- FILEPATH: /C:/_source/Playground/PlayGround/src/app/components/signals/child1/child1.component.html -->
+<div>
+    <h1>User Profile Signal Properties child 1:</h1>
+    <ul>
+        <li>Id: {{ userProfileSignal?.id}}</li>
+        <li>Name: {{ userProfileSignal?.username }}</li>
+        <li>Email: {{ userProfileSignal?.email }}</li>
+    </ul>
+        <input [formControl]="inputName" type="text" placeholder="Enter your name">
+    <button (click)="submit()">Submit</button>
+</div>
+

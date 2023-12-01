@@ -11,14 +11,19 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class Child1Component {
   inputName = new FormControl('');
-submit() {
+  
+  userProfileSignal = this.service.userProfileSignal();
+
+  
+  submit() {
   let userName = this.inputName.value;
   if(userName){
     this.service.updateProfile(userName);
   } 
 }
 
-  userProfileSignal = this.service.userProfileSignal();
-
-  constructor(public service : SignalService) {}
+  
+  constructor(private service : SignalService) {
+    
+  }
 }

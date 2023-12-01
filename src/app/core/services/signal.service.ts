@@ -16,10 +16,14 @@ export class SignalService {
   }
 
   updateProfile(userName : string) {
-    this.userProfileSignal.update(user  => {
-      user ? user.username = userName : null;
-      return user;
-    });
+    //call api
+      //success
+      //callback
+      this.userProfileSignal.update(user  => {
+        user ? user.username = userName : null;
+        return user;
+      });
+
 }
 }
 
